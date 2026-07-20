@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#faf8f3"/>
-  <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#1c1a17" stroke-width="2.5"/>
-  <text x="32" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="600" text-anchor="middle" fill="#bc4b2b">DH</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="#0e0e13"/>
+  <rect x="1" y="1" width="14" height="1" fill="#2d2d3c"/>
+  <rect x="1" y="14" width="14" height="1" fill="#2d2d3c"/>
+  <!-- pixel "D" -->
+  <rect x="3" y="3"  width="6" height="2"  fill="#ffe70a"/>
+  <rect x="3" y="11" width="6" height="2"  fill="#ffe70a"/>
+  <rect x="3" y="3"  width="2" height="10" fill="#ffe70a"/>
+  <rect x="9" y="5"  width="2" height="6"  fill="#ffe70a"/>
 </svg>
