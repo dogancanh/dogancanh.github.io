@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <rect width="16" height="16" rx="3" fill="#0e0e13"/>
+  <text x="8" y="11.6" text-anchor="middle" fill="#ffe70a"
+        font-family="ui-monospace, 'SF Mono', 'DejaVu Sans Mono', 'Courier New', monospace"
+        font-weight="700" font-size="8.5" letter-spacing="-0.3">DH</text>
+</svg>

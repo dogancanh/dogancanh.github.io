@@ -167,23 +167,12 @@ img, canvas { display: block; }
 }
 
 /* ---------- About ---------- */
-.about__grid { display: grid; grid-template-columns: 1fr auto; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
-.about__text p { color: var(--mute); margin-bottom: 1.2rem; max-width: 58ch; }
+.about__grid { display: block; }
+.about__text p { color: var(--mute); margin-bottom: 1.2rem; max-width: 62ch; }
 .about__text p:first-child { color: var(--ink); }
 .about__links { list-style: none; display: flex; gap: 1.6rem; margin-top: 1.6rem; font-family: var(--sk); font-size: .8rem; }
 .about__links a { color: var(--yellow); position: relative; }
 .about__links a:hover { text-shadow: 2px 2px 0 var(--black); }
-
-.about__avatar { display: flex; justify-content: center; }
-#avatar {
-  image-rendering: pixelated;
-  width: clamp(180px, 40vw, 240px); height: auto;
-  border: 3px solid var(--line); box-shadow: 7px 7px 0 var(--black); background: var(--panel);
-}
-@media (max-width: 720px) {
-  .about__grid { grid-template-columns: 1fr; }
-  .about__avatar { order: -1; justify-content: flex-start; }
-}
 
 /* ---------- Projects table ---------- */
 .ptable { list-style: none; border: 3px solid var(--line); box-shadow: 7px 7px 0 var(--black); }
