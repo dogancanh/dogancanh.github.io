@@ -18,8 +18,8 @@
   --pink:    #ff5da2;
   --black:   #07070b;
 
-  --px: "Pixelify Sans", "Courier New", monospace;
-  --sk: "Silkscreen", "Pixelify Sans", monospace;
+  --px: "Pixelify Sans", "Courier New", monospace;             /* pixel display: name + section titles */
+  --sk: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace; /* readable body/UI mono */
 
   --maxw: 1120px;
   --pad: clamp(1.1rem, 4.5vw, 4rem);
@@ -32,11 +32,11 @@ html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
-  font-family: var(--px);
+  font-family: var(--sk);
   background: var(--bg);
   color: var(--ink);
-  font-size: clamp(1rem, .96rem + .2vw, 1.08rem);
-  line-height: 1.6;
+  font-size: clamp(.96rem, .92rem + .2vw, 1.04rem);
+  line-height: 1.65;
   overflow-x: hidden;
   /* dotted pixel grid */
   background-image: radial-gradient(rgba(255,255,255,.05) 1.5px, transparent 1.5px);
@@ -67,14 +67,14 @@ img, canvas { display: block; }
   border-bottom: 3px solid var(--line);
 }
 .logo {
-  font-family: var(--sk); font-weight: 700; font-size: 1.4rem; color: var(--yellow);
+  font-family: var(--px); font-weight: 700; font-size: 1.5rem; color: var(--yellow);
   letter-spacing: .04em; text-shadow: 2px 2px 0 var(--black);
 }
 .logo__blink { color: var(--yellow); }
 
 .nav { display: flex; gap: 1.5rem; }
 .nav a {
-  font-family: var(--px); font-weight: 500; font-size: .95rem; letter-spacing: .04em;
+  font-family: var(--sk); font-weight: 700; font-size: .82rem; letter-spacing: .02em;
   color: var(--mute); text-transform: uppercase; padding: .2rem 0; position: relative;
   transition: color .15s;
 }
@@ -146,7 +146,7 @@ img, canvas { display: block; }
 
 /* ---------- Pixel button ---------- */
 .pxbtn {
-  font-family: var(--px); font-weight: 600; font-size: .98rem; letter-spacing: .03em;
+  font-family: var(--sk); font-weight: 700; font-size: .86rem; letter-spacing: .02em;
   text-transform: uppercase; color: #0e0e13; background: var(--yellow);
   border: 3px solid var(--black); padding: .8rem 1.4rem; cursor: pointer;
   display: inline-flex; align-items: center; gap: .5rem;
@@ -193,13 +193,13 @@ img, canvas { display: block; }
   width: 100%; display: grid; grid-template-columns: auto 1fr auto auto auto; gap: 1rem;
   align-items: center; text-align: left; cursor: pointer;
   background: var(--panel); border: none; color: var(--ink);
-  padding: 1.05rem 1.2rem; font-family: var(--px);
+  padding: 1.05rem 1.2rem; font-family: var(--sk);
   transition: background .12s;
 }
 .prow__head:hover { background: var(--panel2); }
 .prow__no { font-family: var(--sk); font-size: .8rem; color: var(--yellow); }
 .prow__name { font-family: var(--px); font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; }
-.prow__meta { font-family: var(--px); font-size: .8rem; color: var(--mute); letter-spacing: .02em; }
+.prow__meta { font-family: var(--sk); font-size: .72rem; color: var(--mute); letter-spacing: .01em; }
 .prow__tag { font-family: var(--sk); font-size: .6rem; padding: .28rem .5rem; border: 2px solid; letter-spacing: .04em; white-space: nowrap; }
 .prow__tag--live { color: var(--green); border-color: #2f8f6b; }
 .prow__tag--soon { color: var(--yellow); border-color: var(--yellow-d); }
@@ -215,9 +215,9 @@ img, canvas { display: block; }
 .prow__role { font-family: var(--sk); font-size: .74rem; color: var(--mute); }
 .prow__role span:first-child { color: var(--yellow); }
 .prow__chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
-.prow__chips span { font-family: var(--px); font-size: .78rem; color: var(--ink); background: var(--bg); border: 2px solid var(--line); padding: .3rem .55rem; }
+.prow__chips span { font-family: var(--sk); font-size: .72rem; color: var(--ink); background: var(--bg); border: 2px solid var(--line); padding: .3rem .55rem; }
 .prow__links { display: flex; flex-wrap: wrap; gap: 1.2rem; }
-.pxlink { font-family: var(--px); font-weight: 500; font-size: .9rem; color: var(--yellow); border-bottom: 2px solid transparent; padding-bottom: 2px; }
+.pxlink { font-family: var(--sk); font-weight: 700; font-size: .78rem; color: var(--yellow); border-bottom: 2px solid transparent; padding-bottom: 2px; }
 .pxlink:hover { border-bottom-color: var(--yellow); }
 .pxlink--muted { color: var(--mute); cursor: default; }
 .pxlink--muted:hover { border-bottom-color: transparent; }
@@ -236,7 +236,7 @@ img, canvas { display: block; }
   transition: transform .07s steps(2), box-shadow .07s steps(2);
 }
 .sbadge:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--black); }
-.skills__sub { font-family: var(--px); font-weight: 600; font-size: .95rem; color: var(--teal); margin-bottom: 1.2rem; letter-spacing: .04em; }
+.skills__sub { font-family: var(--sk); font-weight: 700; font-size: .82rem; color: var(--teal); margin-bottom: 1.2rem; letter-spacing: .04em; }
 .skills__services ul { list-style: none; }
 .skills__services li {
   color: var(--mute); padding: .7rem 0 .7rem 1.6rem; position: relative; border-bottom: 2px solid var(--line);
@@ -262,12 +262,12 @@ img, canvas { display: block; }
 .field { display: block; margin-bottom: 1.1rem; }
 .field__label { font-family: var(--sk); font-size: .66rem; color: var(--mute); display: block; margin-bottom: .45rem; letter-spacing: .06em; }
 .field input, .field textarea {
-  width: 100%; font-family: var(--px); font-size: 1rem; color: var(--ink);
+  width: 100%; font-family: var(--sk); font-size: .95rem; color: var(--ink);
   background: var(--bg); border: 3px solid var(--line); padding: .7rem .8rem;
   box-shadow: inset 2px 2px 0 rgba(0,0,0,.45); resize: vertical;
 }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--yellow); }
-.form__note { font-family: var(--px); font-size: .82rem; color: var(--mute); margin-top: .9rem; }
+.form__note { font-family: var(--sk); font-size: .74rem; color: var(--mute); margin-top: .9rem; }
 .form__note.err { color: var(--pink); }
 @media (max-width: 720px) { .contact__grid { grid-template-columns: 1fr; gap: 2.5rem; } }
 
@@ -275,7 +275,7 @@ img, canvas { display: block; }
 .ftr {
   max-width: var(--maxw); margin: 0 auto; padding: 2.2rem var(--pad);
   border-top: 3px solid var(--line); display: flex; justify-content: space-between; gap: 1rem;
-  flex-wrap: wrap; font-family: var(--px); font-size: .82rem; color: var(--mute); letter-spacing: .02em;
+  flex-wrap: wrap; font-family: var(--sk); font-size: .74rem; color: var(--mute); letter-spacing: .01em;
 }
 .ftr span:last-child { color: var(--pink); }
 

@@ -227,43 +227,48 @@
     });
   }
 
-  /* ---------- Pixel-art avatar ---------- */
+  /* ---------- Pixel-art avatar (portrait) ---------- */
+  var AVATAR_PAL = {
+    B: "#d6d6d3", b: "#c2c2bf", H: "#6f4b2e", h: "#4a3320",
+    K: "#f0c49b", k: "#d79f74", E: "#2f2116", R: "#3a2718",
+    S: "#2b2d33", W: "#f2f2f0"
+  };
+  var AVATAR_ART = [
+    "BBBBBBBBBBBBBBBBBBBB",
+    "BBBBBBBhhhhhhBBBBBBB",
+    "BBBBBhhHHHHHhhBBBBBB",
+    "BBBBhHHHHHHHHHhBBBBB",
+    "BBBBhHHHHHHHHHHhBBBB",
+    "BBBBhHHHHHHHHHHhBBBB",
+    "BBBBhhKKKKKKKKhhBBBB",
+    "BBBBhKKKKKKKKKKhBBBB",
+    "BBBBhKEEKKKKEEKhBBBB",
+    "BBBBhKWEKKKKWEKhBBBB",
+    "BBBBhKKKKkkKKKKhBBBB",
+    "BBBBhKKKkKKkKKKhBBBB",
+    "BBBBhRRRRRRRRRRhBBBB",
+    "BBBbRRRRRRRRRRRRbBBB",
+    "BBBbRRRRRRRRRRRRbBBB",
+    "BBBBRRRRRRRRRRRRBBBB",
+    "BBBBBRRRRRRRRRRBBBBB",
+    "BBBBBBRRRRRRRRBBBBBB",
+    "BBBBBBBBKKKKBBBBBBBB",
+    "BBBSSSSSSKKSSSSSSBBB",
+    "BBSSSSSSWWWWSSSSSSBB",
+    "SSSSSSSWWWWWWSSSSSSS"
+  ];
   function drawAvatar() {
     var canvas = document.getElementById("avatar");
     if (!canvas || !canvas.getContext) return;
-    var PAL = {
-      T: "#2bb3c0", o: "#1f96a1", F: "#cbb892",
-      H: "#33241a", S: "#e7b088", s: "#cf9066",
-      C: "#14141d", Y: "#ffe70a", G: "#0e0e13", W: "#eef0f2"
-    };
-    var ART = [
-      "                ",
-      "  TTTTTTTTTTTT  ",
-      "  TTTTHHHHTTTT  ",
-      "  TTTHHHHHHTTT  ",
-      "  TTHHHHHHHHTT  ",
-      "  TTHSSSSSSHTT  ",
-      "  TTHSSSSSSHTT  ",
-      "  TTHGGGGGGHTT  ",
-      "  TTHGWGGWGHTT  ",
-      "  TTHSSSSSSHTT  ",
-      "  TTHHSSSSHHTT  ",
-      "  TTTHHSSHHTTT  ",
-      "  TTTTHHHHTTTT  ",
-      "  TTYCCCCCCYTT  ",
-      "  TCCCCCCCCCCT  ",
-      "  ToCCCYYCCCoT  ",
-      "  FFFFFFFFFFFF  ",
-      "  FFFFFFFFFFFF  "
-    ];
+    var cols = AVATAR_ART[0].length, rows = AVATAR_ART.length, scale = 11;
+    canvas.width = cols * scale;
+    canvas.height = rows * scale;
     var ctx = canvas.getContext("2d");
-    var cols = 16, rows = ART.length;
-    var scale = Math.floor(canvas.width / cols); // 192/16 = 12
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (var r = 0; r < rows; r++) {
-      var line = ART[r];
+      var line = AVATAR_ART[r];
       for (var c = 0; c < cols; c++) {
-        var col = PAL[line.charAt(c)];
+        var col = AVATAR_PAL[line.charAt(c)];
         if (col) { ctx.fillStyle = col; ctx.fillRect(c * scale, r * scale, scale, scale); }
       }
     }
