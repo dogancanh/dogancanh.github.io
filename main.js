@@ -1,82 +1,82 @@
-/* ============================================================
-   Pixel-art portfolio — interactions (no dependencies, no build)
-   ============================================================ */
+/*
+   Pixel-art portfolio: interactions (no dependencies, no build)
+*/
 (function () {
   "use strict";
 
   var I18N = {
     tr: {
-      _title: "Doğancan Hırdavatçıoğlu — Full-stack Mühendis",
+      _title: "Doğancan Hırdavatçıoğlu | Full-stack Mühendis",
       metaDesc: "Full-stack mühendis Doğancan Hırdavatçıoğlu'nun pixel-art portfolyosu. Guardi, MasaMasa ve Eccehome projeleri.",
       navAbout: "HAKKIMDA", navWork: "PROJELER", navSkills: "YETENEKLER", navContact: "İLETİŞİM",
       menuLabel: "Menü",
       heroKicker: "> FULL-STACK ENGINEER",
-      heroLede: "Veritabanı altyapısından ürün tasarımına, fikirden App Store'a — uçtan uca ürünler kuruyorum.",
-      ctaTalk: "İLETİŞİME GEÇ", ctaWork: "PROJELER ▸",
+      heroLede: "Veritabanı altyapısından ürün tasarımına, fikirden App Store'a kadar uçtan uca ürünler kuruyorum.",
+      ctaTalk: "İLETİŞİME GEÇ", ctaWork: "PROJELER",
       aboutTitle: "HAKKIMDA",
       aboutBody1: "Türkiye'nin fintech sektöründe, Oracle PL/SQL üzerinde çalışan veri-kalite motorlarından App Store'da yayınlanan iOS uygulamalarına kadar geniş bir yelpazede ürün geliştiriyorum.",
       aboutBody2: "İşin hem altyapı hem de tasarım tarafında rahatım; bir fikri veritabanı şemasından son kullanıcının elindeki cilalı arayüze taşımayı seviyorum. Guardi, MasaMasa ve Eccehome bu uçtan uca yaklaşımın üç örneği.",
       workTitle: "PROJELER",
       roleLabel: "ROL:",
-      guardiMeta: "iOS · APP STORE", guardiRole: "Tasarım, iOS, backend & App Store yayını — uçtan uca.",
+      guardiMeta: "iOS · APP STORE", guardiRole: "Tasarım, iOS, backend ve App Store yayını dahil hepsi.",
       guardiDesc: "iPhone için spam çağrı engelleyici ve yapay zekâ destekli SMS filtresi. Cihaz üstünde çalışan CoreML sınıflandırıcı; aramaları ve mesajları gizliliği koruyarak süzer.",
       linkSite: "TANITIM ↗",
-      masaMeta: "iOS · SWIFTUI", masaRole: "Ürün, tasarım sistemi & iOS geliştirme.",
+      masaMeta: "iOS · SWIFTUI", masaRole: "Ürün, tasarım sistemi ve iOS geliştirme.",
       masaDesc: "Düğün ve davetler için akıllı masa yerleşim planlayıcı. Özel yerleştirme algoritması konukları gruplara ve kurallara göre otomatik oturtur; cihaz-içi yapay zekâ konuk listesini otomatik içe aktarır. Kendi tasarım sistemi üzerine kuruludur.",
       chipAI: "Cihaz-içi AI",
       masaSoon: "DETAYLI DEMO TALEP ÜZERİNE",
-      ecceMeta: "E-TİCARET · WEB", ecceRole: "Full-stack geliştirme, altyapı & DevOps.",
-      ecceDesc: "Uçtan uca e-ticaret platformu: Next.js vitrin ve yönetim paneli, Prisma + PostgreSQL backend. Google Shopping entegrasyonu, teknik SEO, Meta CAPI ve otomatik stok yönetimi.",
+      ecceMeta: "E-TİCARET · WEB", ecceRole: "Full-stack geliştirme, altyapı ve DevOps.",
+      ecceDesc: "Uçtan uca e-ticaret platformu: Next.js vitrin ve yönetim paneli, Prisma ve PostgreSQL backend. Google Shopping entegrasyonu, teknik SEO, Meta CAPI ve otomatik stok yönetimi.",
       tagLive: "CANLI", tagSoon: "YAKINDA",
       skillsTitle: "YETENEKLER", servicesTitle: "// HİZMETLER",
       svc1: "Uçtan uca ürün geliştirme (web + mobil)",
-      svc2: "iOS uygulama geliştirme & App Store yayını",
-      svc3: "E-ticaret & backend sistemleri",
-      svc4: "Veritabanı & fintech entegrasyonları",
+      svc2: "iOS uygulama geliştirme ve App Store yayını",
+      svc3: "E-ticaret ve backend sistemleri",
+      svc4: "Veritabanı ve fintech entegrasyonları",
       contactTitle: "İLETİŞİM",
       contactLede: "Bir fikriniz mi var ya da ekibinize uçtan uca bir mühendis mi arıyorsunuz? Yazın, en kısa sürede dönüş yaparım.",
-      copyHint: "[KOPYALA]", copyDone: "[KOPYALANDI ✓]",
-      fName: "AD", fEmail: "E-POSTA", fMsg: "MESAJ", fSend: "GÖNDER ▸",
+      copyHint: "[KOPYALA]", copyDone: "[KOPYALANDI]",
+      fName: "AD", fEmail: "E-POSTA", fMsg: "MESAJ", fSend: "GÖNDER",
       fNote: "E-posta uygulamanız hazır mesajla açılır.",
       fErr: "Lütfen tüm alanları doldurun.",
-      fOpening: "E-posta uygulamanız açılıyor…",
+      fOpening: "E-posta uygulamanız açılıyor...",
       footerNote: "TÜRKİYE'DE ♥ İLE YAPILDI"
     },
     en: {
-      _title: "Doğancan Hırdavatçıoğlu — Full-stack Engineer",
+      _title: "Doğancan Hırdavatçıoğlu | Full-stack Engineer",
       metaDesc: "Pixel-art portfolio of full-stack engineer Doğancan Hırdavatçıoğlu. Projects: Guardi, MasaMasa, and Eccehome.",
       navAbout: "ABOUT", navWork: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
       menuLabel: "Menu",
       heroKicker: "> FULL-STACK ENGINEER",
-      heroLede: "From database infrastructure to product design, from idea to App Store — I build end-to-end products.",
-      ctaTalk: "LET'S TALK", ctaWork: "PROJECTS ▸",
+      heroLede: "From database infrastructure to product design, and from an idea all the way to the App Store. I build end-to-end products.",
+      ctaTalk: "LET'S TALK", ctaWork: "PROJECTS",
       aboutTitle: "ABOUT ME",
-      aboutBody1: "In Turkey's fintech sector, I build products across a wide range — from data-quality engines running on Oracle PL/SQL to iOS apps published on the App Store.",
+      aboutBody1: "In Turkey's fintech sector, I build products across a wide range, from data-quality engines running on Oracle PL/SQL to iOS apps published on the App Store.",
       aboutBody2: "I'm at home on both the infrastructure and the design side; I love carrying an idea from the database schema all the way to a polished interface in the user's hands. Guardi, MasaMasa, and Eccehome are three examples of that end-to-end approach.",
       workTitle: "PROJECTS",
       roleLabel: "ROLE:",
-      guardiMeta: "iOS · APP STORE", guardiRole: "Design, iOS, backend & App Store release — end to end.",
+      guardiMeta: "iOS · APP STORE", guardiRole: "Design, iOS, backend, and the App Store release. All of it.",
       guardiDesc: "A spam-call blocker and AI-powered SMS filter for iPhone. An on-device CoreML classifier screens calls and messages while preserving privacy.",
       linkSite: "LANDING ↗",
-      masaMeta: "iOS · SWIFTUI", masaRole: "Product, design system & iOS development.",
+      masaMeta: "iOS · SWIFTUI", masaRole: "Product, design system, and iOS development.",
       masaDesc: "A smart seating-plan builder for weddings and events. A custom placement algorithm seats guests automatically by groups and rules; the on-device AI imports the guest list automatically. Built on its own design system.",
       chipAI: "On-device AI",
       masaSoon: "DETAILED DEMO ON REQUEST",
-      ecceMeta: "E-COMMERCE · WEB", ecceRole: "Full-stack development, infrastructure & DevOps.",
-      ecceDesc: "An end-to-end e-commerce platform: a Next.js storefront and admin panel on a Prisma + PostgreSQL backend. Google Shopping, technical SEO, Meta CAPI, and automated inventory management.",
+      ecceMeta: "E-COMMERCE · WEB", ecceRole: "Full-stack development, infrastructure, and DevOps.",
+      ecceDesc: "An end-to-end e-commerce platform: a Next.js storefront and admin panel on a Prisma and PostgreSQL backend. Google Shopping, technical SEO, Meta CAPI, and automated inventory management.",
       tagLive: "LIVE", tagSoon: "SOON",
       skillsTitle: "SKILLS", servicesTitle: "// SERVICES",
       svc1: "End-to-end product development (web + mobile)",
-      svc2: "iOS app development & App Store release",
-      svc3: "E-commerce & backend systems",
-      svc4: "Database & fintech integrations",
+      svc2: "iOS app development and App Store release",
+      svc3: "E-commerce and backend systems",
+      svc4: "Database and fintech integrations",
       contactTitle: "CONTACT",
       contactLede: "Have an idea, or looking for an end-to-end engineer for your team? Drop a line and I'll get back to you soon.",
-      copyHint: "[COPY]", copyDone: "[COPIED ✓]",
-      fName: "NAME", fEmail: "EMAIL", fMsg: "MESSAGE", fSend: "SEND ▸",
+      copyHint: "[COPY]", copyDone: "[COPIED]",
+      fName: "NAME", fEmail: "EMAIL", fMsg: "MESSAGE", fSend: "SEND",
       fNote: "Opens your email app with a ready-to-send message.",
       fErr: "Please fill in all fields.",
-      fOpening: "Opening your email app…",
+      fOpening: "Opening your email app...",
       footerNote: "MADE WITH ♥ IN TÜRKİYE"
     }
   };
@@ -119,7 +119,6 @@
     });
   }
 
-  /* ---------- Mobile nav ---------- */
   function initNav() {
     var hdr = document.getElementById("hdr");
     var toggle = document.getElementById("navToggle");
@@ -135,7 +134,6 @@
     window.addEventListener("resize", function () { if (window.innerWidth > 860) close(); });
   }
 
-  /* ---------- Projects accordion ---------- */
   function initProjects() {
     document.querySelectorAll(".prow__head").forEach(function (head) {
       head.addEventListener("click", function () {
@@ -146,7 +144,6 @@
     });
   }
 
-  /* ---------- Reveal ---------- */
   function initReveal() {
     var items = document.querySelectorAll(".reveal");
     if (!("IntersectionObserver" in window)) {
@@ -161,7 +158,6 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- Header border on scroll (subtle) ---------- */
   function initScroll() {
     var hdr = document.getElementById("hdr");
     if (!hdr) return;
@@ -176,7 +172,6 @@
     update();
   }
 
-  /* ---------- Copy email ---------- */
   function initCopy() {
     var btn = document.getElementById("emailCopy");
     if (!btn) return;
@@ -204,7 +199,6 @@
     });
   }
 
-  /* ---------- Contact form -> mailto ---------- */
   function initForm() {
     var form = document.getElementById("contactForm");
     var note = document.getElementById("formNote");
@@ -220,61 +214,13 @@
         return;
       }
       if (note) { note.textContent = dict.fOpening; note.classList.remove("err"); }
-      var subject = "Portfolyo — " + name;
-      var body = msg + "\n\n— " + name + " (" + email + ")";
+      var subject = "Portfolyo: " + name;
+      var body = msg + "\n\n" + name + " (" + email + ")";
       window.location.href = "mailto:dhirdavatcioglu@gmail.com?subject=" +
         encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   }
 
-  /* ---------- Pixel-art avatar (portrait) ---------- */
-  var AVATAR_PAL = {
-    B: "#d6d6d3", b: "#c2c2bf", H: "#6f4b2e", h: "#4a3320",
-    K: "#f0c49b", k: "#d79f74", E: "#2f2116", R: "#3a2718",
-    S: "#2b2d33", W: "#f2f2f0"
-  };
-  var AVATAR_ART = [
-    "BBBBBBBBBBBBBBBBBBBB",
-    "BBBBBBBhhhhhhBBBBBBB",
-    "BBBBBhhHHHHHhhBBBBBB",
-    "BBBBhHHHHHHHHHhBBBBB",
-    "BBBBhHHHHHHHHHHhBBBB",
-    "BBBBhHHHHHHHHHHhBBBB",
-    "BBBBhhKKKKKKKKhhBBBB",
-    "BBBBhKKKKKKKKKKhBBBB",
-    "BBBBhKEEKKKKEEKhBBBB",
-    "BBBBhKWEKKKKWEKhBBBB",
-    "BBBBhKKKKkkKKKKhBBBB",
-    "BBBBhKKKkKKkKKKhBBBB",
-    "BBBBhRRRRRRRRRRhBBBB",
-    "BBBbRRRRRRRRRRRRbBBB",
-    "BBBbRRRRRRRRRRRRbBBB",
-    "BBBBRRRRRRRRRRRRBBBB",
-    "BBBBBRRRRRRRRRRBBBBB",
-    "BBBBBBRRRRRRRRBBBBBB",
-    "BBBBBBBBKKKKBBBBBBBB",
-    "BBBSSSSSSKKSSSSSSBBB",
-    "BBSSSSSSWWWWSSSSSSBB",
-    "SSSSSSSWWWWWWSSSSSSS"
-  ];
-  function drawAvatar() {
-    var canvas = document.getElementById("avatar");
-    if (!canvas || !canvas.getContext) return;
-    var cols = AVATAR_ART[0].length, rows = AVATAR_ART.length, scale = 11;
-    canvas.width = cols * scale;
-    canvas.height = rows * scale;
-    var ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (var r = 0; r < rows; r++) {
-      var line = AVATAR_ART[r];
-      for (var c = 0; c < cols; c++) {
-        var col = AVATAR_PAL[line.charAt(c)];
-        if (col) { ctx.fillStyle = col; ctx.fillRect(c * scale, r * scale, scale, scale); }
-      }
-    }
-  }
-
-  /* ---------- Boot ---------- */
   function boot() {
     initLang();
     initNav();
@@ -283,7 +229,6 @@
     initScroll();
     initCopy();
     initForm();
-    drawAvatar();
     var y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
   }

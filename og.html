@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: #0e0e13; }
@@ -17,18 +17,18 @@
     font-family: "JetBrains Mono", monospace;
   }
   .top { display: flex; align-items: center; justify-content: space-between; }
-  .logo { font-family: "Pixelify Sans"; font-weight: 700; font-size: 34px; color: #ffe70a; text-shadow: 3px 3px 0 #07070b; letter-spacing: .04em; }
-  .kick { font-family: "JetBrains Mono"; font-weight: 700; font-size: 17px; color: #8b8b9b; letter-spacing: .1em; }
-  .mid { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .logo { font-weight: 800; font-size: 32px; color: #ffe70a; text-shadow: 3px 3px 0 #07070b; letter-spacing: .02em; }
+  .kick { font-weight: 700; font-size: 17px; color: #8b8b9b; letter-spacing: .08em; }
+  .mid { display: flex; align-items: center; justify-content: space-between; gap: 44px; }
   .lhs { max-width: 720px; }
-  .role { font-family: "JetBrains Mono"; font-weight: 700; font-size: 19px; color: #2bb3c0; letter-spacing: .04em; margin-bottom: 22px; }
-  .name-a { font-family: "Pixelify Sans"; font-weight: 700; font-size: 104px; line-height: .9; color: #ffe70a; text-shadow: 5px 5px 0 #07070b; text-transform: uppercase; }
-  .name-b { font-family: "Pixelify Sans"; font-weight: 700; font-size: 60px; line-height: 1; color: #eaeaf2; text-shadow: 4px 4px 0 #07070b; text-transform: uppercase; margin-top: 6px; }
-  .avatar { border: 3px solid #2d2d3c; box-shadow: 8px 8px 0 #07070b; image-rendering: pixelated; background: #16161f; flex: 0 0 auto; }
+  .role { font-weight: 700; font-size: 19px; color: #2bb3c0; letter-spacing: .04em; margin-bottom: 22px; }
+  .name-a { font-weight: 800; font-size: 90px; line-height: .95; letter-spacing: -.03em; color: #ffe70a; text-shadow: 5px 5px 0 #07070b; }
+  .name-b { font-weight: 800; font-size: 52px; line-height: 1; letter-spacing: -.03em; color: #eaeaf2; text-shadow: 4px 4px 0 #07070b; margin-top: 8px; }
+  .avatar { width: 240px; height: 240px; image-rendering: pixelated; border: 3px solid #2d2d3c; box-shadow: 8px 8px 0 #07070b; background: #16161f; flex: 0 0 auto; }
   .bottom { display: flex; align-items: flex-end; justify-content: space-between; border-top: 3px solid #2d2d3c; padding-top: 24px; }
-  .projects { font-family: "Pixelify Sans"; font-weight: 600; font-size: 26px; color: #eaeaf2; letter-spacing: .02em; }
-  .projects .d { color: #ffe70a; margin: 0 12px; }
-  .url { font-family: "JetBrains Mono"; font-weight: 500; font-size: 19px; color: #8b8b9b; }
+  .projects { font-weight: 700; font-size: 22px; color: #eaeaf2; letter-spacing: .02em; }
+  .projects .d { color: #ffe70a; margin: 0 10px; }
+  .url { font-weight: 500; font-size: 19px; color: #8b8b9b; }
 </style>
 </head>
 <body>
@@ -44,7 +44,7 @@
       <div class="name-a">DOĞANCAN</div>
       <div class="name-b">HIRDAVATÇIOĞLU</div>
     </div>
-    <canvas id="avatar" class="avatar" width="200" height="220" style="width:200px;height:220px;"></canvas>
+    <img class="avatar" src="avatar.png" alt="Doğancan Hırdavatçıoğlu" />
   </div>
 
   <div class="bottom">
@@ -52,29 +52,5 @@
     <div class="url">dogancanh.github.io</div>
   </div>
 </div>
-
-<script>
-  (function () {
-    var PAL = {
-      B: "#d6d6d3", b: "#c2c2bf", H: "#6f4b2e", h: "#4a3320",
-      K: "#f0c49b", k: "#d79f74", E: "#2f2116", R: "#3a2718",
-      S: "#2b2d33", W: "#f2f2f0"
-    };
-    var ART = [
-      "BBBBBBBBBBBBBBBBBBBB","BBBBBBBhhhhhhBBBBBBB","BBBBBhhHHHHHhhBBBBBB","BBBBhHHHHHHHHHhBBBBB",
-      "BBBBhHHHHHHHHHHhBBBB","BBBBhHHHHHHHHHHhBBBB","BBBBhhKKKKKKKKhhBBBB","BBBBhKKKKKKKKKKhBBBB",
-      "BBBBhKEEKKKKEEKhBBBB","BBBBhKWEKKKKWEKhBBBB","BBBBhKKKKkkKKKKhBBBB","BBBBhKKKkKKkKKKhBBBB",
-      "BBBBhRRRRRRRRRRhBBBB","BBBbRRRRRRRRRRRRbBBB","BBBbRRRRRRRRRRRRbBBB","BBBBRRRRRRRRRRRRBBBB",
-      "BBBBBRRRRRRRRRRBBBBB","BBBBBBRRRRRRRRBBBBBB","BBBBBBBBKKKKBBBBBBBB","BBBSSSSSSKKSSSSSSBBB",
-      "BBSSSSSSWWWWSSSSSSBB","SSSSSSSWWWWWWSSSSSSS"
-    ];
-    var cv = document.getElementById("avatar"), ctx = cv.getContext("2d");
-    var cols = ART[0].length, rows = ART.length, sc = Math.floor(cv.width / cols);
-    for (var r = 0; r < rows; r++) for (var c = 0; c < cols; c++) {
-      var col = PAL[ART[r].charAt(c)];
-      if (col) { ctx.fillStyle = col; ctx.fillRect(c*sc, r*sc, sc, sc); }
-    }
-  })();
-</script>
 </body>
 </html>
