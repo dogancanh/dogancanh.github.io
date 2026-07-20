@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #faf8f3; }
+  .card {
+    width: 1200px; height: 630px; position: relative; overflow: hidden;
+    background: #faf8f3; color: #1c1a17;
+    padding: 72px 80px; display: flex; flex-direction: column; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+  }
+  .card::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: .04; mix-blend-mode: multiply; pointer-events: none;
+  }
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .mark {
+    font-family: "Fraunces", serif; font-weight: 600; font-size: 30px;
+    width: 68px; height: 68px; border: 2.5px solid #1c1a17; border-radius: 50%;
+    display: grid; place-items: center;
+  }
+  .kicker { font-size: 17px; letter-spacing: .14em; color: #6d665a; text-transform: uppercase; }
+  .name {
+    font-family: "Fraunces", serif; font-weight: 400; font-size: 96px; line-height: .98;
+    letter-spacing: -.03em; max-width: 15ch;
+  }
+  .name em { font-style: italic; color: #bc4b2b; }
+  .role { font-size: 26px; letter-spacing: .01em; color: #4a453d; margin-top: 22px; }
+  .bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+  .projects { font-size: 20px; letter-spacing: .04em; color: #1c1a17; }
+  .projects .dot { color: #bc4b2b; margin: 0 12px; }
+  .url { font-size: 20px; color: #6d665a; letter-spacing: .02em; }
+  .rule { height: 2px; background: #e3ddd0; margin: 30px 0 26px; }
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="top">
+    <div class="mark">DH</div>
+    <div class="kicker">Portfolyo · ’26</div>
+  </div>
+
+  <div>
+    <div class="name">Doğancan Hırdavatçıoğlu</div>
+    <div class="role">Full-stack Engineer — veritabanından arayüze, fikirden <em>App&nbsp;Store</em>'a.</div>
+  </div>
+
+  <div>
+    <div class="rule"></div>
+    <div class="bottom">
+      <div class="projects">Guardi<span class="dot">·</span>MasaMasa<span class="dot">·</span>Eccehome</div>
+      <div class="url">dogancanh.github.io</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

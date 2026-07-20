@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doğancan Hırdavatçıoğlu — Full-stack Engineer</title>
+<meta name="description" data-i18n-meta="metaDesc" content="Türkiye'nin fintech sektöründe veritabanı altyapısından ürün tasarımına kadar uçtan uca çözümler üreten full-stack mühendis. Guardi, MasaMasa ve Eccehome projeleri." />
+<meta name="author" content="Doğancan Hırdavatçıoğlu" />
+<meta name="theme-color" content="#faf8f3" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Doğancan Hırdavatçıoğlu — Full-stack Engineer" />
+<meta property="og:description" content="Veritabanından arayüze, fikirden App Store'a — uçtan uca ürünler kuran full-stack mühendis." />
+<meta property="og:url" content="https://dogancanh.github.io" />
+<meta property="og:image" content="https://dogancanh.github.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Doğancan Hırdavatçıoğlu — Full-stack Engineer" />
+<meta name="twitter:description" content="Veritabanından arayüze, fikirden App Store'a — uçtan uca ürünler." />
+<meta name="twitter:image" content="https://dogancanh.github.io/og-image.png" />
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" aria-label="Doğancan Hırdavatçıoğlu">
+    <span class="brand__mark">DH</span>
+    <span class="brand__name">Doğancan Hırdavatçıoğlu</span>
+  </a>
+
+  <nav class="nav" id="primaryNav" aria-label="Ana menü">
+    <a href="#work" data-i18n="navWork">Projeler</a>
+    <a href="#skills" data-i18n="navSkills">Yetenekler</a>
+    <a href="#about" data-i18n="navAbout">Hakkımda</a>
+    <a href="#contact" data-i18n="navContact">İletişim</a>
+  </nav>
+
+  <div class="controls">
+    <div class="lang-toggle" role="group" aria-label="Dil / Language">
+      <button type="button" class="lang-btn" data-lang="tr" aria-pressed="true">TR</button>
+      <span class="lang-sep">/</span>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" data-i18n-aria-label="themeLabel" data-i18n-title="themeTitle" aria-label="Temayı değiştir" title="Tema">
+      <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <button type="button" class="nav-toggle" id="navToggle" data-i18n-aria-label="menuLabel" aria-label="Menü" aria-expanded="false" aria-controls="primaryNav">
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__grid">
+      <div class="hero__index reveal">
+        <span class="mono" data-i18n="idxA">SEÇME İŞLER</span>
+        <span class="mono">— ’26</span>
+      </div>
+
+      <p class="hero__eyebrow mono reveal" data-i18n="heroEyebrow">Full-stack Mühendis · Türkiye</p>
+
+      <h1 class="hero__title reveal" data-i18n-html="heroTitle">
+        Veritabanından arayüze,<br />fikirden <em>App Store</em>'a —<br />uçtan uca ürünler.
+      </h1>
+
+      <p class="hero__lede reveal" data-i18n="heroLede">
+        Türkiye'nin fintech sektöründe, veritabanı altyapısından ürün tasarımına kadar
+        uçtan uca çözümler üreten full-stack mühendisim.
+      </p>
+
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="#work">
+          <span data-i18n="ctaWork">Projeleri Gör</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact" data-i18n="ctaContact">İletişime Geç</a>
+        <span class="status">
+          <span class="status__dot"></span>
+          <span data-i18n="status">Yeni projelere açık</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="hero__stack mono reveal" aria-hidden="true">
+      <span>Swift</span><span>SwiftUI</span><span>CoreML</span><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>Node.js</span><span>Oracle&nbsp;PL/SQL</span><span>Railway</span>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section work" id="work">
+    <div class="section__head reveal">
+      <span class="section__label mono">§ 01</span>
+      <h2 class="section__title" data-i18n="workTitle">Öne Çıkan Projeler</h2>
+    </div>
+
+    <ol class="projects">
+
+      <!-- Guardi -->
+      <li class="project reveal" style="--dot:#7c5cff">
+        <div class="project__no mono">01</div>
+        <div class="project__body">
+          <div class="project__topline">
+            <h3 class="project__name">Guardi</h3>
+            <span class="project__tag mono" data-i18n="guardiTag">iOS · App Store'da canlı</span>
+          </div>
+          <p class="project__desc" data-i18n="guardiDesc">
+            iPhone için spam çağrı engelleyici ve yapay zekâ destekli SMS filtresi. Cihaz üstünde
+            çalışan CoreML sınıflandırıcı; aramaları ve mesajları gizliliği koruyarak süzer —
+            hiçbir veri cihazdan çıkmaz.
+          </p>
+          <p class="project__role mono">
+            <span class="project__roleLabel" data-i18n="roleLabel">ROL</span>
+            <span data-i18n="guardiRole">Tasarım, iOS geliştirme, backend & App Store yayını — uçtan uca.</span>
+          </p>
+          <ul class="chips mono" aria-label="Teknolojiler">
+            <li>Swift</li><li>SwiftUI</li><li>CoreML</li><li>CallKit</li><li>Node.js</li><li>Railway</li>
+          </ul>
+          <div class="project__links">
+            <a href="https://apps.apple.com/tr/app/id6760951651" target="_blank" rel="noopener" class="link">
+              <span data-i18n="linkAppStore">App Store</span> <span class="link__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://dogancanh.github.io/guardi/" target="_blank" rel="noopener" class="link">
+              <span data-i18n="linkSite">Tanıtım sitesi</span> <span class="link__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- MasaMasa -->
+      <li class="project reveal" style="--dot:#d6247a">
+        <div class="project__no mono">02</div>
+        <div class="project__body">
+          <div class="project__topline">
+            <h3 class="project__name">MasaMasa</h3>
+            <span class="project__tag project__tag--soon mono" data-i18n="masaTag">iOS · Yakında App Store'da</span>
+          </div>
+          <p class="project__desc" data-i18n="masaDesc">
+            Düğün ve davetler için akıllı masa yerleşim planlayıcı. Özel yerleştirme algoritması
+            konukları gruplara ve kurallara göre otomatik oturtur; cihaz-içi yapay zekâ “Sihirli Liste”
+            konuk listesini otomatik içe aktarır. Kendi tasarım sistemi üzerine kuruludur.
+          </p>
+          <p class="project__role mono">
+            <span class="project__roleLabel" data-i18n="roleLabel">ROL</span>
+            <span data-i18n="masaRole">Ürün, tasarım sistemi & iOS geliştirme.</span>
+          </p>
+          <ul class="chips mono" aria-label="Teknolojiler">
+            <li>SwiftUI</li><li>SwiftData</li><li>Swift</li><li data-i18n="chipOnDeviceAI">Cihaz-içi AI</li>
+          </ul>
+          <div class="project__links">
+            <span class="link link--muted" data-i18n="masaSoon">Detaylı demo talep üzerine</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- Eccehome -->
+      <li class="project reveal" style="--dot:#2f8f6b">
+        <div class="project__no mono">03</div>
+        <div class="project__body">
+          <div class="project__topline">
+            <h3 class="project__name">Eccehome</h3>
+            <span class="project__tag mono" data-i18n="ecceTag">E-ticaret Platformu · Canlı</span>
+          </div>
+          <p class="project__desc" data-i18n="ecceDesc">
+            Uçtan uca e-ticaret platformu: Next.js vitrin ve yönetim paneli, Prisma + PostgreSQL
+            backend. Google Shopping entegrasyonu, teknik SEO, Meta CAPI ve otomatik stok
+            yönetimiyle üretimde çalışan tam bir mağaza.
+          </p>
+          <p class="project__role mono">
+            <span class="project__roleLabel" data-i18n="roleLabel">ROL</span>
+            <span data-i18n="ecceRole">Full-stack geliştirme, altyapı & DevOps.</span>
+          </p>
+          <ul class="chips mono" aria-label="Teknolojiler">
+            <li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>Tailwind</li><li>Railway</li>
+          </ul>
+          <div class="project__links">
+            <a href="https://eccehome.com.tr" target="_blank" rel="noopener" class="link">
+              eccehome.com.tr <span class="link__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- SKILLS & SERVICES -->
+  <section class="section skills" id="skills">
+    <div class="section__head reveal">
+      <span class="section__label mono">§ 02</span>
+      <h2 class="section__title" data-i18n="skillsTitle">Yetenekler & Hizmetler</h2>
+    </div>
+
+    <div class="skills__grid">
+      <div class="skills__col reveal">
+        <h3 class="skills__subtitle mono" data-i18n="skillsStack">TEKNOLOJİ YIĞINI</h3>
+        <dl class="stack">
+          <div class="stack__row">
+            <dt class="mono">Frontend</dt>
+            <dd>React · Next.js · TypeScript · Tailwind CSS</dd>
+          </div>
+          <div class="stack__row">
+            <dt class="mono">Backend</dt>
+            <dd>Node.js · Express · PostgreSQL · Prisma · REST</dd>
+          </div>
+          <div class="stack__row">
+            <dt class="mono" data-i18n="stackMobile">iOS / Mobil</dt>
+            <dd data-i18n="stackMobileVal">Swift · SwiftUI · SwiftData · CoreML · Cihaz-içi AI</dd>
+          </div>
+          <div class="stack__row">
+            <dt class="mono" data-i18n="stackData">Veritabanı & Kurumsal</dt>
+            <dd data-i18n="stackDataVal">Oracle PL/SQL · Veri-kalite motorları · Fintech</dd>
+          </div>
+          <div class="stack__row">
+            <dt class="mono" data-i18n="stackOps">DevOps & Araçlar</dt>
+            <dd>Railway · CI/CD · Git · XcodeGen</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="skills__col reveal">
+        <h3 class="skills__subtitle mono" data-i18n="skillsServices">HİZMETLER</h3>
+        <ul class="services">
+          <li data-i18n="svc1">Uçtan uca ürün geliştirme (web + mobil)</li>
+          <li data-i18n="svc2">iOS uygulama geliştirme & App Store yayını</li>
+          <li data-i18n="svc3">E-ticaret & backend sistemleri</li>
+          <li data-i18n="svc4">Veritabanı & fintech entegrasyonları</li>
+          <li data-i18n="svc5">Tasarım sistemleri & UI mühendisliği</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section__head reveal">
+      <span class="section__label mono">§ 03</span>
+      <h2 class="section__title" data-i18n="aboutTitle">Hakkımda</h2>
+    </div>
+    <div class="about__body reveal">
+      <p class="about__lead" data-i18n="aboutLead">
+        Ben Doğancan. Fikri veritabanı şemasından, son kullanıcının elindeki cilalı arayüze
+        taşımayı seviyorum.
+      </p>
+      <p data-i18n="aboutBody">
+        Türkiye'nin fintech sektöründe, Oracle PL/SQL üzerinde çalışan veri-kalite motorlarından
+        App Store'da yayınlanan iOS uygulamalarına kadar geniş bir yelpazede ürün geliştiriyorum.
+        İşin hem altyapı hem de tasarım tarafında rahatım. Guardi, MasaMasa ve Eccehome — bu
+        uçtan uca yaklaşımın üç farklı örneği.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="contact__inner reveal">
+      <span class="section__label mono">§ 04</span>
+      <h2 class="contact__title" data-i18n="contactTitle">Birlikte çalışalım.</h2>
+      <p class="contact__lede" data-i18n="contactLede">
+        Bir fikriniz mi var ya da ekibinize uçtan uca bir mühendis mi arıyorsunuz? Konuşalım.
+      </p>
+
+      <div class="contact__actions">
+        <button type="button" class="email-copy" id="emailCopy" data-email="dhirdavatcioglu@gmail.com">
+          <span class="email-copy__addr mono">dhirdavatcioglu@gmail.com</span>
+          <span class="email-copy__hint" data-i18n="copyHint">kopyala</span>
+          <span class="email-copy__done" data-i18n="copyDone">kopyalandı ✓</span>
+        </button>
+      </div>
+
+      <ul class="socials mono">
+        <li><a href="https://github.com/dogancanh" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/dogancan-hirdavatcioglu" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="mailto:dhirdavatcioglu@gmail.com" data-i18n="emailLink">E-posta ↗</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span class="mono">© <span id="year">2026</span> Doğancan Hırdavatçıoğlu</span>
+  <span class="mono" data-i18n="footerNote">Türkiye'den tasarlandı & kodlandı</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
