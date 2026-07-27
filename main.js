@@ -10,6 +10,10 @@
       metaDesc: "Full-stack mühendis Doğancan Hırdavatçıoğlu'nun pixel-art portfolyosu. Guardi, MasaMasa ve EcceHome projeleri.",
       navAbout: "HAKKIMDA", navWork: "PROJELER", navSkills: "YETENEKLER", navContact: "İLETİŞİM",
       menuLabel: "Menü",
+      skipLink: "İçeriğe atla",
+      ogTitle: "Doğancan Hırdavatçıoğlu | Full-stack Mühendis",
+      ogDesc: "Pixel-art portfolyo: veritabanından App Store'a, uçtan uca ürünler kuran full-stack mühendis.",
+      copiedAnnounce: "E-posta adresi kopyalandı.",
       heroKicker: "> FULL-STACK ENGINEER",
       heroLede: "Ödeme sistemleri ve web servislerinden mobil uygulamalara kadar yazılım çözümleri geliştiriyorum.",
       ctaTalk: "İLETİŞİME GEÇ", ctaWork: "PROJELER",
@@ -47,6 +51,10 @@
       metaDesc: "Pixel-art portfolio of full-stack engineer Doğancan Hırdavatçıoğlu. Projects: Guardi, MasaMasa, and EcceHome.",
       navAbout: "ABOUT", navWork: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
       menuLabel: "Menu",
+      skipLink: "Skip to content",
+      ogTitle: "Doğancan Hırdavatçıoğlu | Full-stack Engineer",
+      ogDesc: "Pixel-art portfolio: a full-stack engineer building end-to-end products, from database to App Store.",
+      copiedAnnounce: "Email address copied.",
       heroKicker: "> FULL-STACK ENGINEER",
       heroLede: "I build software solutions across payment systems, web services, and mobile applications.",
       ctaTalk: "LET'S TALK", ctaWork: "PROJECTS",
@@ -103,6 +111,11 @@
       if (dict[k] != null) el.setAttribute("aria-label", dict[k]);
     });
 
+    var ogT = document.querySelector('meta[property="og:title"]');
+    if (ogT && dict.ogTitle != null) ogT.setAttribute("content", dict.ogTitle);
+    var ogD = document.querySelector('meta[property="og:description"]');
+    if (ogD && dict.ogDesc != null) ogD.setAttribute("content", dict.ogDesc);
+
     document.querySelectorAll(".lang__btn").forEach(function (btn) {
       btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === activeLang ? "true" : "false");
     });
@@ -124,22 +137,40 @@
     var toggle = document.getElementById("navToggle");
     var nav = document.getElementById("primaryNav");
     if (!hdr || !toggle || !nav) return;
-    function close() { hdr.classList.remove("nav-open"); toggle.setAttribute("aria-expanded", "false"); }
+    function syncInert() {
+      nav.inert = window.innerWidth <= 860 && !hdr.classList.contains("nav-open");
+    }
+    function close() {
+      hdr.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+      syncInert();
+    }
     toggle.addEventListener("click", function () {
       var open = hdr.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      syncInert();
     });
     nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", close); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
-    window.addEventListener("resize", function () { if (window.innerWidth > 860) close(); });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 860) close();
+      syncInert();
+    });
+    syncInert();
   }
 
   function initProjects() {
     document.querySelectorAll(".prow__head").forEach(function (head) {
+      var row = head.closest(".prow");
+      var body = row.querySelector(".prow__body");
+      if (body) body.inert = true;
       head.addEventListener("click", function () {
-        var row = head.closest(".prow");
         var open = row.classList.toggle("open");
         head.setAttribute("aria-expanded", open ? "true" : "false");
+        if (body) {
+          body.inert = !open;
+          body.style.maxHeight = open ? body.scrollHeight + "px" : "";
+        }
       });
     });
   }
@@ -178,6 +209,8 @@
     var timer;
     function done() {
       btn.classList.add("copied");
+      var status = document.getElementById("copyStatus");
+      if (status) status.textContent = (I18N[activeLang] || I18N.tr).copiedAnnounce;
       clearTimeout(timer);
       timer = setTimeout(function () { btn.classList.remove("copied"); }, 1800);
     }
@@ -206,14 +239,23 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var dict = I18N[activeLang] || I18N.tr;
-      var name = form.elements["name"].value.trim();
-      var email = form.elements["email"].value.trim();
-      var msg = form.elements["message"].value.trim();
-      if (!name || !email || !msg) {
+      var fields = [form.elements["name"], form.elements["email"], form.elements["message"]];
+      var firstEmpty = null;
+      fields.forEach(function (f) {
+        var empty = !f.value.trim();
+        f.setAttribute("aria-invalid", empty ? "true" : "false");
+        if (empty && !firstEmpty) firstEmpty = f;
+      });
+      if (firstEmpty) {
         if (note) { note.textContent = dict.fErr; note.classList.add("err"); }
+        firstEmpty.focus();
         return;
       }
+      fields.forEach(function (f) { f.removeAttribute("aria-invalid"); });
       if (note) { note.textContent = dict.fOpening; note.classList.remove("err"); }
+      var name = fields[0].value.trim();
+      var email = fields[1].value.trim();
+      var msg = fields[2].value.trim();
       var subject = "Portfolyo: " + name;
       var body = msg + "\n\n" + name + " (" + email + ")";
       window.location.href = "mailto:dhirdavatcioglu@gmail.com?subject=" +

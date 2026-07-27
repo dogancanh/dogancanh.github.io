@@ -21,10 +21,13 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" /></noscript>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<a class="skip" href="#top" data-i18n="skipLink">İçeriğe atla</a>
 
 <div class="scanlines" aria-hidden="true"></div>
 
@@ -50,7 +53,7 @@
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 
   <!-- HERO -->
   <section class="hero" id="hero">
@@ -230,6 +233,7 @@
           <span class="email-copy__hint" data-i18n="copyHint">[KOPYALA]</span>
           <span class="email-copy__done" data-i18n="copyDone">[KOPYALANDI]</span>
         </button>
+        <span class="sr-only" id="copyStatus" role="status" aria-live="polite"></span>
       </div>
 
       <form class="contact__form reveal" id="contactForm" novalidate>
@@ -246,7 +250,7 @@
           <textarea name="message" rows="4" required></textarea>
         </label>
         <button type="submit" class="pxbtn" data-i18n="fSend">GÖNDER</button>
-        <p class="form__note" id="formNote" data-i18n="fNote">E-posta uygulamanız hazır mesajla açılır.</p>
+        <p class="form__note" id="formNote" role="status" aria-live="polite" data-i18n="fNote">E-posta uygulamanız hazır mesajla açılır.</p>
       </form>
     </div>
   </section>
@@ -258,6 +262,6 @@
   <span data-i18n="footerNote">İZMİR, TÜRKİYE</span>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>
