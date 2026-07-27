@@ -1,5 +1,5 @@
 /*
-   Pixel-art portfolio: interactions (no dependencies, no build)
+   Ledger portfolio: interactions (no dependencies, no build)
 */
 (function () {
   "use strict";
@@ -7,15 +7,17 @@
   var I18N = {
     tr: {
       _title: "Doğancan Hırdavatçıoğlu | Full-stack Mühendis",
-      metaDesc: "Full-stack mühendis Doğancan Hırdavatçıoğlu'nun pixel-art portfolyosu. Guardi, MasaMasa ve EcceHome projeleri.",
+      metaDesc: "Full-stack mühendis Doğancan Hırdavatçıoğlu'nun portfolyosu. Guardi, MasaMasa ve EcceHome projeleri.",
       navAbout: "HAKKIMDA", navWork: "PROJELER", navSkills: "YETENEKLER", navContact: "İLETİŞİM",
       menuLabel: "Menü",
       skipLink: "İçeriğe atla",
       ogTitle: "Doğancan Hırdavatçıoğlu | Full-stack Mühendis",
-      ogDesc: "Pixel-art portfolyo: veritabanından App Store'a, uçtan uca ürünler kuran full-stack mühendis.",
+      ogDesc: "Ödeme sistemlerinden App Store'a, uçtan uca ürünler kuran full-stack mühendis.",
       copiedAnnounce: "E-posta adresi kopyalandı.",
-      heroKicker: "> FULL-STACK ENGINEER",
+      heroKicker: "FULL-STACK ENGINEER",
       heroLede: "Ödeme sistemleri ve web servislerinden mobil uygulamalara kadar yazılım çözümleri geliştiriyorum.",
+      hmRole: "ROL", hmRoleV: "Full-stack Engineer",
+      hmLoc: "KONUM", hmStat: "DURUM", hmStatV: "3 uygulama yayında",
       ctaTalk: "İLETİŞİME GEÇ", ctaWork: "PROJELER",
       aboutTitle: "HAKKIMDA",
       aboutBody1: "İzmir merkezli bir yazılım mühendisiyim. Ödeme sistemleri ve web servisleri alanında PL/SQL ve .NET ile çalışıyorum; kurumsal projelerde çözüm geliştirme ve müşteri entegrasyonları konularında deneyim sahibiyim.",
@@ -48,15 +50,17 @@
     },
     en: {
       _title: "Doğancan Hırdavatçıoğlu | Full-stack Engineer",
-      metaDesc: "Pixel-art portfolio of full-stack engineer Doğancan Hırdavatçıoğlu. Projects: Guardi, MasaMasa, and EcceHome.",
+      metaDesc: "Portfolio of full-stack engineer Doğancan Hırdavatçıoğlu. Projects: Guardi, MasaMasa, and EcceHome.",
       navAbout: "ABOUT", navWork: "PROJECTS", navSkills: "SKILLS", navContact: "CONTACT",
       menuLabel: "Menu",
       skipLink: "Skip to content",
       ogTitle: "Doğancan Hırdavatçıoğlu | Full-stack Engineer",
-      ogDesc: "Pixel-art portfolio: a full-stack engineer building end-to-end products, from database to App Store.",
+      ogDesc: "A full-stack engineer building end-to-end products, from payment systems to the App Store.",
       copiedAnnounce: "Email address copied.",
-      heroKicker: "> FULL-STACK ENGINEER",
+      heroKicker: "FULL-STACK ENGINEER",
       heroLede: "I build software solutions across payment systems, web services, and mobile applications.",
+      hmRole: "ROLE", hmRoleV: "Full-stack Engineer",
+      hmLoc: "LOCATION", hmStat: "STATUS", hmStatV: "3 apps shipped",
       ctaTalk: "LET'S TALK", ctaWork: "PROJECTS",
       aboutTitle: "ABOUT ME",
       aboutBody1: "I'm a software engineer based in İzmir, working on payment systems and web services with PL/SQL and .NET. I have experience in solution development and customer integrations on enterprise projects.",
@@ -138,7 +142,7 @@
     var nav = document.getElementById("primaryNav");
     if (!hdr || !toggle || !nav) return;
     function syncInert() {
-      nav.inert = window.innerWidth <= 860 && !hdr.classList.contains("nav-open");
+      nav.inert = window.innerWidth <= 820 && !hdr.classList.contains("nav-open");
     }
     function close() {
       hdr.classList.remove("nav-open");
@@ -153,7 +157,7 @@
     nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", close); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 860) close();
+      if (window.innerWidth > 820) close();
       syncInert();
     });
     syncInert();
@@ -187,20 +191,6 @@
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     items.forEach(function (el) { io.observe(el); });
-  }
-
-  function initScroll() {
-    var hdr = document.getElementById("hdr");
-    if (!hdr) return;
-    var ticking = false;
-    function update() {
-      hdr.style.borderBottomColor = (window.scrollY || 0) > 8 ? "var(--yellow-d)" : "var(--line)";
-      ticking = false;
-    }
-    window.addEventListener("scroll", function () {
-      if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
-    }, { passive: true });
-    update();
   }
 
   function initCopy() {
@@ -268,7 +258,6 @@
     initNav();
     initProjects();
     initReveal();
-    initScroll();
     initCopy();
     initForm();
     var y = document.getElementById("year");

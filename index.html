@@ -4,13 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doğancan Hırdavatçıoğlu | Full-stack Engineer</title>
-<meta name="description" data-i18n-meta="metaDesc" content="Full-stack mühendis Doğancan Hırdavatçıoğlu'nun pixel-art portfolyosu. Guardi, MasaMasa ve EcceHome projeleri." />
+<meta name="description" data-i18n-meta="metaDesc" content="Full-stack mühendis Doğancan Hırdavatçıoğlu'nun portfolyosu. Guardi, MasaMasa ve EcceHome projeleri." />
 <meta name="author" content="Doğancan Hırdavatçıoğlu" />
-<meta name="theme-color" content="#0e0e13" />
+<meta name="theme-color" content="#edeef1" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161b" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Doğancan Hırdavatçıoğlu | Full-stack Engineer" />
-<meta property="og:description" content="Pixel-art portfolyo: veritabanından App Store'a, uçtan uca ürünler kuran full-stack mühendis." />
+<meta property="og:description" content="Ödeme sistemlerinden App Store'a, uçtan uca ürünler kuran full-stack mühendis." />
 <meta property="og:url" content="https://dogancanh.github.io" />
 <meta property="og:image" content="https://dogancanh.github.io/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -19,17 +20,14 @@
 <meta name="twitter:image" content="https://dogancanh.github.io/og-image.png" />
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" /></noscript>
+<link rel="preload" href="fonts/plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/plex-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/plex-mono-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <a class="skip" href="#top" data-i18n="skipLink">İçeriğe atla</a>
-
-<div class="scanlines" aria-hidden="true"></div>
 
 <header class="hdr" id="hdr">
   <a class="logo" href="#top" aria-label="Doğancan Hırdavatçıoğlu">DH<span class="logo__blink">_</span></a>
@@ -57,21 +55,8 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero__badges" aria-hidden="true">
-      <span class="pxbadge" style="--c:#6f52d9; top:8%;  right:16%; --d:.5s">.NET</span>
-      <span class="pxbadge" style="--c:#f05138; top:16%; right:36%; --d:1s">Swift</span>
-      <span class="pxbadge" style="--c:#61dafb; top:24%; right:11%; --d:.3s">React</span>
-      <span class="pxbadge" style="--c:#62a63f; top:32%; right:24%; --d:0s">C#</span>
-      <span class="pxbadge" style="--c:#2bb3c0; top:40%; right:40%; --d:1.6s">REST</span>
-      <span class="pxbadge" style="--c:#83cd29; top:50%; right:15%; --d:.9s">Node</span>
-      <span class="pxbadge" style="--c:#4169e1; top:64%; right:32%; --d:.2s">Postgres</span>
-      <span class="pxbadge" style="--c:#c74634; top:74%; right:11%; --d:1.4s">PL/SQL</span>
-      <span class="pxbadge" style="--c:#f7c948; top:80%; right:42%; --d:.6s">Git</span>
-      <span class="pxbadge" style="--c:#0a84ff; top:88%; right:28%; --d:1.1s">SwiftUI</span>
-    </div>
-
     <div class="hero__inner">
-      <p class="hero__kicker reveal"><span data-i18n="heroKicker">&gt; FULL-STACK ENGINEER</span><span class="cursor">_</span></p>
+      <p class="hero__kicker reveal"><span data-i18n="heroKicker">FULL-STACK ENGINEER</span><span class="cursor">_</span></p>
       <h1 class="hero__name reveal">
         <span class="hero__name-a">DOĞANCAN</span>
         <span class="hero__name-b">HIRDAVATÇIOĞLU</span>
@@ -79,6 +64,13 @@
       <p class="hero__lede reveal" data-i18n="heroLede">
         Ödeme sistemleri ve web servislerinden mobil uygulamalara kadar yazılım çözümleri geliştiriyorum.
       </p>
+
+      <dl class="hero__meta reveal">
+        <div><dt data-i18n="hmRole">ROL</dt><dd data-i18n="hmRoleV">Full-stack Engineer</dd></div>
+        <div><dt data-i18n="hmLoc">KONUM</dt><dd>İzmir, TR</dd></div>
+        <div><dt data-i18n="hmStat">DURUM</dt><dd data-i18n="hmStatV">3 uygulama yayında</dd></div>
+      </dl>
+
       <div class="hero__cta reveal">
         <a class="pxbtn" href="#contact" data-i18n="ctaTalk">İLETİŞİME GEÇ</a>
         <a class="pxbtn pxbtn--ghost" href="#work" data-i18n="ctaWork">PROJELER</a>
