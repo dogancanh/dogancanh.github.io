@@ -253,7 +253,7 @@ main:focus { outline: none; }
 
 .prow__body {
   max-height: 0; overflow: hidden; padding: 0 1.1rem; background: var(--paper2);
-  transition: max-height .35s ease, padding .35s ease;
+  transition: max-height .35s ease;
 }
 .prow.open .prow__body { max-height: 60rem; padding: 1.2rem 1.1rem; border-top: 1px solid var(--rule); }
 .prow__body p { color: var(--mute); margin-bottom: .85rem; max-width: 66ch; }
